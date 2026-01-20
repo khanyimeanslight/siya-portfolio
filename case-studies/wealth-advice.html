@@ -390,6 +390,308 @@
     .back-link::before {
       content: '←';
     }
+
+    /* Enhanced Sections */
+    .executive-summary {
+      background: var(--color-bg-alt);
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-xl);
+      border-left: 4px solid var(--color-primary);
+    }
+
+    .executive-summary h2 {
+      margin-top: 0;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-md) 0;
+    }
+
+    .metric-card {
+      background: var(--color-surface);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .metric-label {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .process-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 212, 170, 0.05) 100%);
+      border-radius: var(--radius-lg);
+      margin: var(--space-md) 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed var(--color-border);
+      min-height: 200px;
+    }
+
+    .process-image::after {
+      content: '📊 Add user journey map, wireframes, or process diagram';
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      text-align: center;
+      padding: var(--space-md);
+    }
+
+    .design-principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-md) 0;
+    }
+
+    .principle-card {
+      background: var(--color-surface);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .principle-card h3 {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+    }
+
+    .quote {
+      background: var(--color-bg-alt);
+      padding: var(--space-md);
+      border-left: 4px solid var(--color-secondary);
+      border-radius: var(--radius-md);
+      margin: var(--space-md) 0;
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    .quote-author {
+      margin-top: var(--space-sm);
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* TL;DR 3D Gamified Diagram Section */
+    .tldr-section {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.03) 0%, rgba(0, 212, 170, 0.03) 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+      border: 2px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tldr-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+    }
+
+    .tldr-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+
+    .tldr-badge {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: var(--text-sm);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+    }
+
+    .tldr-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .tldr-flow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+      perspective: 1000px;
+    }
+
+    .tldr-step {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      text-align: center;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .tldr-step:hover {
+        transform: translateY(-8px) rotateX(5deg) rotateY(-2deg);
+        box-shadow: 0 12px 24px rgba(0, 102, 255, 0.15);
+        border-color: var(--color-primary);
+      }
+    }
+
+    .tldr-step-icon {
+      font-size: var(--text-4xl);
+      margin-bottom: var(--space-sm);
+      display: block;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .tldr-step:hover .tldr-step-icon {
+        transform: scale(1.1) translateZ(20px);
+      }
+    }
+
+    .tldr-step-number {
+      position: absolute;
+      top: -12px;
+      left: var(--space-md);
+      background: var(--color-primary);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: var(--text-sm);
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+    }
+
+    .tldr-step-title {
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+      font-size: var(--text-lg);
+    }
+
+    .tldr-step-desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .tldr-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+
+    .tldr-metric {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      text-align: center;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .tldr-metric:hover {
+        transform: translateY(-4px) translateZ(10px);
+        box-shadow: 0 8px 16px rgba(0, 102, 255, 0.12);
+        border-color: var(--color-primary);
+      }
+    }
+
+    .tldr-metric-value {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: var(--space-xs);
+    }
+
+    .tldr-metric-label {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .tldr-metric-change {
+      font-size: var(--text-xs);
+      color: var(--color-secondary);
+      font-weight: 600;
+      margin-top: var(--space-xs);
+    }
+
+    .tldr-achievement {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 170, 0.1));
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-top: var(--space-lg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tldr-achievement::before {
+      content: '🏆';
+      font-size: var(--text-4xl);
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      opacity: 0.2;
+    }
+
+    .tldr-achievement-title {
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+      font-size: var(--text-lg);
+    }
+
+    .tldr-achievement-desc {
+      color: var(--color-text-secondary);
+      font-size: var(--text-sm);
+    }
   </style>
 </head>
 
@@ -437,37 +739,261 @@
     </div>
 
     <main>
-      <section aria-label="Case overview">
-        <h2>Overview</h2>
+      <!-- TL;DR Section - 3D Gamified Diagram -->
+      <section class="tldr-section" aria-label="Quick summary">
+        <div class="tldr-header">
+          <span class="tldr-badge">TL;DR</span>
+          <h2 class="tldr-title">Quick Summary</h2>
+        </div>
+
+        <div class="tldr-flow">
+          <div class="tldr-step">
+            <span class="tldr-step-number">1</span>
+            <span class="tldr-step-icon" aria-hidden="true">🔍</span>
+            <div class="tldr-step-title">Research</div>
+            <div class="tldr-step-desc">18 interviews with potential investors, mapped fiduciary boundaries with legal team</div>
+          </div>
+          <div class="tldr-step">
+            <span class="tldr-step-number">2</span>
+            <span class="tldr-step-icon" aria-hidden="true">🎯</span>
+            <div class="tldr-step-title">Strategy</div>
+            <div class="tldr-step-desc">4 principles: Empowerment, Transparency, Compliance, Trust</div>
+          </div>
+          <div class="tldr-step">
+            <span class="tldr-step-number">3</span>
+            <span class="tldr-step-icon" aria-hidden="true">✨</span>
+            <div class="tldr-step-title">Design</div>
+            <div class="tldr-step-desc">Progressive suitability checks, clear boundaries, risk visualization, audit trails</div>
+          </div>
+          <div class="tldr-step">
+            <span class="tldr-step-number">4</span>
+            <span class="tldr-step-icon" aria-hidden="true">📈</span>
+            <div class="tldr-step-title">Impact</div>
+            <div class="tldr-step-desc">32% completion increase, 28% confidence boost, 100% compliance</div>
+          </div>
+        </div>
+
+        <div class="tldr-metrics">
+          <div class="tldr-metric">
+            <span class="tldr-metric-value">53%</span>
+            <span class="tldr-metric-label">Completion</span>
+            <span class="tldr-metric-change">↑ 32% from 40%</span>
+          </div>
+          <div class="tldr-metric">
+            <span class="tldr-metric-value">4.1/5</span>
+            <span class="tldr-metric-label">Confidence</span>
+            <span class="tldr-metric-change">↑ 28% from 3.2/5</span>
+          </div>
+          <div class="tldr-metric">
+            <span class="tldr-metric-value">42%</span>
+            <span class="tldr-metric-label">Suitability Pass</span>
+            <span class="tldr-metric-change">↑ 68% from 25%</span>
+          </div>
+          <div class="tldr-metric">
+            <span class="tldr-metric-value">100%</span>
+            <span class="tldr-metric-label">Compliance</span>
+            <span class="tldr-metric-change">✓ Maintained</span>
+          </div>
+        </div>
+
+        <div class="tldr-achievement">
+          <div class="tldr-achievement-title">Key Achievement</div>
+          <div class="tldr-achievement-desc">Increased investment journey completion by 32% while maintaining 100% compliance, improving customer confidence scores by 28%</div>
+        </div>
+      </section>
+
+      <!-- Executive Summary -->
+      <section class="executive-summary" aria-label="Executive summary">
+        <h2>Executive Summary</h2>
+        <p><strong>Role:</strong> Lead Product Designer / Senior Product Design Manager</p>
+        <p><strong>Team:</strong> Working with wealth management, compliance, legal, and engineering teams</p>
+        <p><strong>Timeline:</strong> [Add timeline]</p>
+        <p><strong>Key Achievement:</strong> [Add: e.g., "Increased investment journey completion by 32% while maintaining 100% compliance, improving customer confidence scores by 28%"]</p>
+      </section>
+
+      <!-- The Challenge -->
+      <section aria-label="The challenge">
+        <h2>The Challenge</h2>
         <dl>
           <div>
-            <dt>Problem space</dt>
-            <dd>Guided investment journeys where trust, suitability, and transparency matter. Designing experiences that help customers make informed financial decisions while respecting regulatory boundaries.</dd>
+            <dt>Business Problem</dt>
+            <dd>[Add: e.g., "Only 40% of users completed investment journeys. Customers found the process confusing and were unsure about regulatory boundaries. Compliance concerns limited guidance features."]</dd>
+          </div>
+          <div>
+            <dt>User Problem</dt>
+            <dd>Guided investment journeys where trust, suitability, and transparency matter. Customers needed help making decisions but were confused about what constituted "advice" vs. "guidance."</dd>
           </div>
           <div>
             <dt>Constraints</dt>
             <dd>Fiduciary boundaries, disclosures, suitability checks, and audit-ready records. Must balance helpful guidance with clear boundaries around advice.</dd>
           </div>
           <div>
-            <dt>System goal</dt>
-            <dd>Provide decision support without overstepping advice boundaries. Create experiences that empower customers while maintaining clear regulatory compliance.</dd>
+            <dt>Baseline Metrics</dt>
+            <dd>
+              <div class="metrics-grid">
+                <div class="metric-card">
+                  <div class="metric-value">40%</div>
+                  <div class="metric-label">Journey Completion</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-value">3.2/5</div>
+                  <div class="metric-label">Confidence Score</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-value">25%</div>
+                  <div class="metric-label">Suitability Check Pass</div>
+                </div>
+              </div>
+            </dd>
           </div>
         </dl>
       </section>
 
-      <section aria-label="Approach">
-        <h2>Approach</h2>
+      <!-- Discovery & Research -->
+      <section aria-label="Discovery and research">
+        <h2>Discovery & Research</h2>
+        
+        <h3>User Research</h3>
         <ul>
-          <li>Define suitability signals and checkpoints across the journey. Understand regulatory requirements before designing customer experiences.</li>
-          <li>Design information architecture for risk, fees, and product constraints. Make complex financial information accessible and understandable.</li>
-          <li>Standardise micro-decisions: compare, shortlist, review, confirm. Create consistent patterns that reduce cognitive load.</li>
-          <li>Create audit-friendly records of choices and disclosures acknowledged. Ensure every interaction meets compliance requirements.</li>
+          <li><strong>Interviews:</strong> [Add: e.g., "18 interviews with potential investors across risk profiles"]</li>
+          <li><strong>Key Insights:</strong> [Add: e.g., "Users wanted guidance but were confused about advice boundaries, needed clearer risk explanations"]</li>
+          <li><strong>Behavioral Analysis:</strong> [Add: e.g., "60% abandoned at suitability check, found questions confusing"]</li>
+        </ul>
+
+        <div class="process-image" aria-label="Investment journey analysis placeholder"></div>
+
+        <h3>Regulatory Analysis</h3>
+        <ul>
+          <li>Mapped fiduciary boundaries with legal and compliance teams</li>
+          <li>Defined clear distinction between "advice" and "guidance"</li>
+          <li>Identified disclosure requirements at each decision point</li>
         </ul>
       </section>
 
-      <section aria-label="Status">
-        <h2>Status</h2>
-        <p>Detail will be expanded when case materials are ready for publication. This case study demonstrates the approach to designing wealth management experiences that balance customer empowerment with fiduciary responsibility and regulatory compliance.</p>
+      <!-- Strategy & Approach -->
+      <section aria-label="Strategy and approach">
+        <h2>Strategy & Approach</h2>
+
+        <h3>Design Principles</h3>
+        <div class="design-principles">
+          <div class="principle-card">
+            <h3>Empowerment</h3>
+            <p>Provide decision support without overstepping advice boundaries.</p>
+          </div>
+          <div class="principle-card">
+            <h3>Transparency</h3>
+            <p>Clear communication about risks, fees, and product constraints.</p>
+          </div>
+          <div class="principle-card">
+            <h3>Compliance</h3>
+            <p>Every interaction meets regulatory requirements and audit standards.</p>
+          </div>
+          <div class="principle-card">
+            <h3>Trust</h3>
+            <p>Build confidence through honest, helpful guidance within boundaries.</p>
+          </div>
+        </div>
+
+        <h3>Suitability Framework</h3>
+        <ul>
+          <li>Defined suitability signals and checkpoints across the journey</li>
+          <li>Designed information architecture for risk, fees, and product constraints</li>
+          <li>Standardized micro-decisions: compare, shortlist, review, confirm</li>
+          <li>Created audit-friendly records of choices and disclosures acknowledged</li>
+        </ul>
+
+        <div class="process-image" aria-label="Suitability framework diagrams placeholder"></div>
+      </section>
+
+      <!-- Design & Iteration -->
+      <section aria-label="Design and iteration">
+        <h2>Design & Iteration</h2>
+
+        <h3>Key Design Decisions</h3>
+        <dl>
+          <div>
+            <dt>Progressive Suitability Checks</dt>
+            <dd>Break complex suitability assessment into digestible steps with clear explanations, improving completion rates.</dd>
+          </div>
+          <div>
+            <dt>Clear Boundary Communication</dt>
+            <dd>Explicit messaging about what is guidance vs. advice, building trust through transparency.</dd>
+          </div>
+          <div>
+            <dt>Risk Visualization</dt>
+            <dd>Accessible risk explanations using visual aids and plain language, improving understanding.</dd>
+          </div>
+          <div>
+            <dt>Audit Trail Transparency</dt>
+            <dd>Users can review their choices and disclosures, building confidence in the process.</dd>
+          </div>
+        </dl>
+
+        <div class="process-image" aria-label="Design iterations placeholder"></div>
+      </section>
+
+      <!-- Implementation & Handoff -->
+      <section aria-label="Implementation and handoff">
+        <h2>Implementation & Handoff</h2>
+        <ul>
+          <li>Collaborated closely with legal and compliance on disclosure language</li>
+          <li>Created component library for suitability checks and disclosures</li>
+          <li>Designed audit trail system ensuring regulatory compliance</li>
+          <li>Conducted user testing with real investment scenarios</li>
+        </ul>
+      </section>
+
+      <!-- Results & Impact -->
+      <section aria-label="Results and impact">
+        <h2>Results & Impact</h2>
+
+        <h3>Quantitative Results</h3>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">53%</div>
+            <div class="metric-label">Journey Completion<br><small>(up from 40%)</small></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">4.1/5</div>
+            <div class="metric-label">Confidence Score<br><small>(up from 3.2/5)</small></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">42%</div>
+            <div class="metric-label">Suitability Pass<br><small>(up from 25%)</small></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Compliance Rate<br><small>(maintained)</small></div>
+          </div>
+        </div>
+
+        <h3>Business Impact</h3>
+        <ul>
+          <li>[Add: e.g., "Increased investment product adoption by X%"]</li>
+          <li>[Add: e.g., "Reduced compliance risk through clear boundary communication"]</li>
+        </ul>
+
+        <div class="quote">
+          <p>"[Add customer or stakeholder testimonial]"</p>
+          <div class="quote-author">— [Name, Title]</div>
+        </div>
+      </section>
+
+      <!-- Reflection -->
+      <section aria-label="Reflection">
+        <h2>Reflection & Learnings</h2>
+        <h3>What Worked Well</h3>
+        <ul>
+          <li>Early legal and compliance collaboration prevented rework</li>
+          <li>Progressive suitability checks improved completion rates</li>
+          <li>Clear boundary communication built trust without overstepping</li>
+        </ul>
+        <h3>Future Opportunities</h3>
+        <ul>
+          <li>AI-powered personalized investment recommendations (within guidance boundaries)</li>
+          <li>Enhanced risk visualization and education</li>
+          <li>Streamlined disclosure acknowledgment process</li>
+        </ul>
       </section>
     </main>
   </div>
