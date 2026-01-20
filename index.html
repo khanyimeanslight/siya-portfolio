@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Siya — Senior Product Design Manager</title>
+
+  <style>
+    /* =========================
+       DESIGN SYSTEM TOKENS
+       ========================= */
+    :root {
+      /* Colors */
+      --color-bg: #ffffff;
+      --color-text: #0b0d12;
+      --color-muted: #5a5f73;
+      --color-accent: #ff4d4f;
+      --color-border: #e5e7ef;
+
+      /* Spacing */
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 32px;
+      --space-lg: 64px;
+      --space-xl: 96px;
+
+      /* Typography */
+      --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --text-sm: 0.95rem;
+      --text-base: 1.05rem;
+      --text-lg: 1.6rem;
+      --text-xl: 2.6rem;
+
+      /* Layout */
+      --max-width: 960px;
+      --line-length: 72ch;
+    }
+
+    /* =========================
+       GLOBAL BASE STYLES
+       ========================= */
+    body {
+      font-family: var(--font-base);
+      background: var(--color-bg);
+      color: var(--color-text);
+      margin: 0;
+      padding: var(--space-lg) var(--space-md) var(--space-xl) var(--space-md);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: var(--max-width);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    section {
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-border);
+    }
+
+    h1 {
+      font-size: var(--text-xl);
+      margin: 0 0 var(--space-xs) 0;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: var(--text-lg);
+      margin: 0 0 var(--space-sm) 0;
+      letter-spacing: -0.2px;
+    }
+
+    p,
+    ul {
+      color: var(--color-muted);
+      font-size: var(--text-base);
+      max-width: var(--line-length);
+      margin: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      display: grid;
+      gap: var(--space-xs);
+    }
+
+    .meta {
+      display: grid;
+      gap: var(--space-xs);
+    }
+
+    .stack {
+      display: grid;
+      gap: var(--space-sm);
+    }
+
+    main {
+      display: grid;
+      gap: var(--space-lg);
+    }
+
+    footer {
+      margin-top: var(--space-lg);
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- =========================
+         HERO / IDENTITY
+         ========================= -->
+    <header>
+      <div class="meta">
+        <h1>Siya</h1>
+        <p>Senior Product Design Manager</p>
+      </div>
+    </header>
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main>
+
+      <section id="intro" class="stack">
+        <h2>Intro &amp; Role</h2>
+        <p>
+          I design end-to-end product systems for regulated financial services —
+          balancing human-centred design, data integrity, and platform scale.
+        </p>
+        <p>
+          My remit: frame problems crisply, align stakeholders early, and land decisions
+          that respect regulation while still moving product velocity forward.
+        </p>
+      </section>
+
+      <section id="how-i-work" class="stack">
+        <h2>How I Work</h2>
+        <ul>
+          <li>Systems thinking first: map flows, controls, and data lineage before UI choices.</li>
+          <li>Regulatory constraints as design inputs: embed KYC, AML, and auditability upfront.</li>
+          <li>Decision-making: clarify trade-offs, define success signals, and set guardrails for iteration.</li>
+          <li>Evidence-led: pair qualitative insight with operational metrics and risk posture.</li>
+        </ul>
+      </section>
+
+      <section id="case-studies" class="stack">
+        <h2>Selected Work</h2>
+        <p>Problem spaces I lead, before case study depth:</p>
+        <ul>
+          <li>Onboarding and identity: reducing friction while strengthening verification rigor.</li>
+          <li>Servicing and operations: elevating agent tooling to cut handle time and errors.</li>
+          <li>Lending and risk: balancing eligibility models with transparent customer journeys.</li>
+          <li>Money movement: resilient payments experiences with clear recovery paths.</li>
+          <li>Wealth and advice: guided decision support that respects fiduciary boundaries.</li>
+        </ul>
+      </section>
+
+      <section id="design-system" class="stack">
+        <h2>Design System</h2>
+        <p>Built for scale, governance, and platform longevity:</p>
+        <ul>
+          <li>Token-driven foundations with accessibility baked into primitives and patterns.</li>
+          <li>Guardrails and contribution models that keep regulated teams aligned.</li>
+          <li>Change management playbooks: versioning, deprecation paths, and rollout criteria.</li>
+          <li>Quality gates: semantic naming, contrast compliance, and audit-ready specs.</li>
+        </ul>
+      </section>
+
+      <section id="leadership" class="stack">
+        <h2>Leadership</h2>
+        <p>
+          I run calmly: clarify intent, set operating cadence, and enable teams to ship responsibly.
+        </p>
+        <ul>
+          <li>Define missions, decision forums, and escalation paths that reduce ambiguity.</li>
+          <li>Mentor designers on systems thinking, critique, and cross-functional negotiation.</li>
+          <li>Partner with legal, risk, and engineering to keep delivery aligned with controls.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer>
+      <p>© Siya — Product Design, Systems Thinking & Leadership</p>
+    </footer>
+
+  </div>
+</body>
+</html>
