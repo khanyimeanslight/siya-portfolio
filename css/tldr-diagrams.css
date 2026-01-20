@@ -1,0 +1,209 @@
+/* =========================
+   TL;DR 3D Gamified Diagrams
+   Used in all case study pages
+   ========================= */
+
+.tldr-section {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.03) 0%, rgba(0, 212, 170, 0.03) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border: 2px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.tldr-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+}
+
+.tldr-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.tldr-badge {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+.tldr-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* 3D Process Flow */
+.tldr-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+  perspective: 1000px;
+}
+
+.tldr-step {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tldr-step:hover {
+    transform: translateY(-8px) rotateX(5deg) rotateY(-2deg);
+    box-shadow: 0 12px 24px rgba(0, 102, 255, 0.15);
+    border-color: var(--color-primary);
+  }
+}
+
+.tldr-step-icon {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-sm);
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tldr-step:hover .tldr-step-icon {
+    transform: scale(1.1) translateZ(20px);
+  }
+}
+
+.tldr-step-number {
+  position: absolute;
+  top: -12px;
+  left: var(--space-md);
+  background: var(--color-primary);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+.tldr-step-title {
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+  font-size: var(--text-lg);
+}
+
+.tldr-step-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Metrics Dashboard */
+.tldr-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.tldr-metric {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tldr-metric:hover {
+    transform: translateY(-4px) translateZ(10px);
+    box-shadow: 0 8px 16px rgba(0, 102, 255, 0.12);
+    border-color: var(--color-primary);
+  }
+}
+
+.tldr-metric-value {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.tldr-metric-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.tldr-metric-change {
+  font-size: var(--text-xs);
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-top: var(--space-xs);
+}
+
+/* Achievement Badge */
+.tldr-achievement {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 170, 0.1));
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tldr-achievement::before {
+  content: '🏆';
+  font-size: var(--text-4xl);
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  opacity: 0.2;
+}
+
+.tldr-achievement-title {
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+  font-size: var(--text-lg);
+}
+
+.tldr-achievement-desc {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
