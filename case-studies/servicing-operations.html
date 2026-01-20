@@ -10,9 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    /* Shared Design System - Matches Main Site */
-    :root {
+  <!-- External CSS - Modular & Maintainable -->
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/case-studies.css">
+  <link rel="stylesheet" href="../css/tldr-diagrams.css">
+  <link rel="stylesheet" href="../css/case-study-content.css">
+</head>
       --color-primary: #0066FF;
       --color-primary-dark: #0052CC;
       --color-secondary: #00D4AA;
@@ -690,9 +694,6 @@
 
     .tldr-achievement-desc {
       color: var(--color-text-secondary);
-      font-size: var(--text-sm);
-    }
-  </style>
 </head>
 
 <body>
@@ -1001,26 +1002,10 @@
     </main>
   </div>
 
-  <script>
-    // Mobile Navigation
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-menu');
-    
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        const isActive = toggle.classList.toggle('active');
-        menu.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', isActive);
-      });
-
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          toggle.classList.remove('active');
-          menu.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  </script>
+  <!-- External JavaScript - Modular & Maintainable -->
+  <script src="../js/utils.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

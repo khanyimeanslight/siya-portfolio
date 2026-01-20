@@ -1,0 +1,218 @@
+/* =========================
+   FINtech DESIGN SYSTEM - WCAG AA Compliant
+   Shared across all pages for consistency
+   ========================= */
+
+:root {
+  /* Fintech Color Palette - Professional & Trustworthy */
+  --color-primary: #0066FF;
+  --color-primary-dark: #0052CC;
+  --color-primary-light: #3385FF;
+  --color-secondary: #00D4AA;
+  --color-secondary-dark: #00B894;
+  --color-accent: #FF6B6B;
+  --color-accent-dark: #EE5A5A;
+  
+  /* Neutral Palette - High Contrast for WCAG */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #F5F7FA;
+  --color-text: #1A1F36;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #718096;
+  --color-border: #E2E8F0;
+  --color-border-soft: #F1F5F9;
+  
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  
+  /* Spacing Scale */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 1rem;      /* 16px */
+  --space-md: 2rem;      /* 32px */
+  --space-lg: 4rem;      /* 64px */
+  --space-xl: 6rem;      /* 96px */
+  --space-2xl: 8rem;     /* 128px */
+  
+  /* Typography - Highly Readable */
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Consolas", monospace;
+  
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px - WCAG minimum */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.5rem;     /* 40px */
+  --text-5xl: 3rem;       /* 48px */
+  --text-6xl: 3.75rem;    /* 60px */
+  
+  /* Line Heights - Optimal Readability */
+  --line-tight: 1.2;
+  --line-normal: 1.5;
+  --line-relaxed: 1.75;
+  --line-loose: 2;
+  
+  /* Layout */
+  --max-width: 1440px;
+  --content-width: 1200px;
+  --line-length: 65ch; /* Optimal reading width */
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows - Subtle & Professional */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px 0 rgba(0, 0, 0, 0.16);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-Index Scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* =========================
+   RESET & BASE STYLES
+   ========================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base for rem calculations */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* =========================
+   ACCESSIBILITY - WCAG AA
+   ========================= */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-md);
+  z-index: var(--z-toast);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary);
+  color: var(--color-bg);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-md);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================
+   TYPOGRAPHY UTILITIES
+   ========================= */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: var(--line-tight);
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(var(--text-2xl), 5vw, var(--text-5xl)); }
+h2 { font-size: clamp(var(--text-xl), 4vw, var(--text-4xl)); }
+h3 { font-size: clamp(var(--text-lg), 3vw, var(--text-3xl)); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+p {
+  line-height: var(--line-relaxed);
+  color: var(--color-text-secondary);
+  max-width: var(--line-length);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* =========================
+   UTILITY CLASSES
+   ========================= */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.content-width {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
