@@ -3,6 +3,44 @@
    Used in individual case study pages
    ========================= */
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .executive-summary {
+    padding: var(--space-md);
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .design-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .tldr-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .tldr-metrics {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tldr-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .tldr-section {
+    padding: var(--space-md);
+  }
+}
+
 /* Executive Summary */
 .executive-summary {
   background: var(--color-bg-alt);

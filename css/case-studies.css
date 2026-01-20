@@ -3,6 +3,46 @@
    Used by index and individual pages
    ========================= */
 
+/* Page Layout */
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: calc(80px + var(--space-xl)) var(--space-md) var(--space-xl);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
 /* Case Study Cards - 3D Gamified */
 .cases-grid {
   display: grid;
@@ -336,8 +376,48 @@
   content: '←';
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cases-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
+  .page {
+    padding: calc(80px + var(--space-md)) var(--space-md) var(--space-lg);
+  }
+
   .cases-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .case-stats {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .case-stat {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .case-stat:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .case-content {
+    padding: var(--space-md);
+  }
+
+  .case-image {
+    aspect-ratio: 16/9;
   }
 }
