@@ -217,7 +217,7 @@
 }
 
 .device-screen::after {
-  content: '💻 Replace with hero project screenshot';
+  content: '';
   position: absolute;
   bottom: var(--space-sm);
   left: var(--space-sm);
@@ -603,8 +603,6 @@
   font-size: var(--text-lg);
 }
 
-/* Footer - Now using footer-premium.css */
-/* Legacy styles removed - see footer-premium.css for new design */
 
 /* Responsive Design - Mobile First */
 @media (max-width: 1200px) {

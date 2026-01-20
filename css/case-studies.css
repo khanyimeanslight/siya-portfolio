@@ -43,7 +43,6 @@
   margin: 0 auto;
 }
 
-/* Case Study Cards - 3D Gamified */
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -184,7 +183,7 @@
 }
 
 .case-image::after {
-  content: '📸 Replace with project image';
+  content: '';
   position: absolute;
   bottom: var(--space-sm);
   left: var(--space-sm);
@@ -292,7 +291,6 @@
   }
 }
 
-/* Case Study Page Styles */
 .case-header {
   margin-bottom: var(--space-xl);
 }
@@ -329,7 +327,7 @@
 }
 
 .case-image-large::after {
-  content: '📸 Replace with project screenshots';
+  content: '';
   position: absolute;
   bottom: var(--space-sm);
   left: var(--space-sm);
@@ -376,7 +374,6 @@
   content: '←';
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .cases-grid {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

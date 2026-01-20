@@ -22,7 +22,6 @@ footer::after {
   z-index: 0;
 }
 
-/* Large Gradient Orb - Top Right */
 footer::before {
   top: -200px;
   right: -100px;
@@ -34,7 +33,6 @@ footer::before {
   animation: floatOrb 20s ease-in-out infinite;
 }
 
-/* Secondary Orb - Bottom Left */
 footer::after {
   bottom: -150px;
   left: -80px;
@@ -61,7 +59,6 @@ footer::after {
   }
 }
 
-/* Geometric Shapes Overlay */
 .footer-shapes {
   position: absolute;
   top: 0;
@@ -129,7 +126,6 @@ footer::after {
   }
 }
 
-/* Footer Content - Above Shapes */
 .footer-content {
   position: relative;
   z-index: 1;
@@ -251,7 +247,6 @@ footer::after {
   width: 100%;
 }
 
-/* Footer Bottom - Premium Styling */
 .footer-bottom {
   position: relative;
   z-index: 1;
@@ -274,7 +269,6 @@ footer::after {
   color: var(--color-text-secondary);
 }
 
-/* Social Links / Additional Footer Elements */
 .footer-social {
   display: flex;
   gap: var(--space-md);
@@ -328,7 +322,6 @@ footer::after {
   z-index: 1;
 }
 
-/* Premium Accent Line */
 .footer-accent {
   position: absolute;
   top: 0;
@@ -341,7 +334,6 @@ footer::after {
   z-index: 2;
 }
 
-/* Responsive Design */
 @media (max-width: 968px) {
   footer {
     padding: var(--space-xl) var(--space-md) var(--space-lg);
@@ -394,7 +386,6 @@ footer::after {
   }
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   footer::before,
   footer::after,

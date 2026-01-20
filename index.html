@@ -6,24 +6,22 @@
   <title>Siya — Senior Product Design Manager | Fintech Design Leader</title>
   <meta name="description" content="Senior Product Design Manager specializing in regulated financial services. Designing platforms that balance compliance, user experience, and scale." />
   
-  <!-- Preload critical fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- External CSS - Modular & Maintainable -->
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/navigation-embedded.css">
   <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="css/hero-premium.css">
   <link rel="stylesheet" href="css/footer-premium.css">
   <link rel="stylesheet" href="css/case-studies.css">
+  <link rel="stylesheet" href="css/accessibility.css">
 </head>
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Embedded Navigation -->
   <nav class="nav-embedded" aria-label="Main navigation">
     <div class="nav-embedded-container">
       <a href="index.html" class="nav-embedded-logo">Siya</a>
@@ -38,7 +36,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section - Premium Enhanced -->
+  <main>
   <section class="hero hero-premium-enhanced" id="main">
     <div class="hero-background-enhanced">
       <div class="hero-gradient-enhanced"></div>
@@ -66,7 +64,6 @@
           Every decision is grounded in systems thinking, regulatory understanding, and human empathy.
         </p>
         
-        <!-- Metrics -->
         <div class="hero-metrics-enhanced">
           <div class="metric-card-enhanced">
             <div class="metric-value-enhanced" data-target="25">0</div>
@@ -100,7 +97,6 @@
       </div>
 
       <div class="hero-visual hero-visual-premium-enhanced">
-        <!-- Google Charts will be loaded here via script -->
         <div class="hero-charts-container-enhanced">
           <div class="chart-card-enhanced">
             <div class="chart-header-enhanced">
@@ -119,7 +115,6 @@
           </div>
         </div>
         
-        <!-- Floating Stats -->
         <div class="floating-stats-enhanced">
           <div class="floating-stat-enhanced">
             <div class="stat-icon-enhanced">📊</div>
@@ -147,8 +142,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section fade-in">
+    <section id="about" class="section fade-in" aria-labelledby="about-heading">
     <div class="section-header">
       <div class="section-eyebrow">About</div>
       <h2 class="section-title">Practice & Lead Consultant</h2>
@@ -168,8 +162,7 @@
     </div>
   </section>
 
-  <!-- Work Section - Interactive Showcase -->
-  <section id="work" class="section fade-in">
+    <section id="work" class="section fade-in" aria-labelledby="work-heading">
     <div class="section-header">
       <div class="section-eyebrow">Selected Work</div>
       <h2 class="section-title">Experience Across Domains</h2>
@@ -184,7 +177,6 @@
           <div class="work-image-placeholder">
             <span class="work-icon">🔐</span>
           </div>
-          <!-- Replace with: <img src="images/onboarding-identity.jpg" alt="Onboarding & Identity design work showing KYC flow"> -->
         </div>
         <div class="work-card-content">
           <h3>Onboarding & Identity</h3>
@@ -202,7 +194,6 @@
           <div class="work-image-placeholder">
             <span class="work-icon">⚙️</span>
           </div>
-          <!-- Replace with: <img src="images/servicing-operations.jpg" alt="Servicing & Operations platform interface"> -->
         </div>
         <div class="work-card-content">
           <h3>Servicing & Operations</h3>
@@ -220,7 +211,6 @@
           <div class="work-image-placeholder">
             <span class="work-icon">📊</span>
           </div>
-          <!-- Replace with: <img src="images/lending-risk.jpg" alt="Lending & Risk platform design showing decision engine"> -->
         </div>
         <div class="work-card-content">
           <h3>Lending & Risk</h3>
@@ -238,7 +228,6 @@
           <div class="work-image-placeholder">
             <span class="work-icon">💸</span>
           </div>
-          <!-- Replace with: <img src="images/money-movement.jpg" alt="Money Movement & Payments design interface"> -->
         </div>
         <div class="work-card-content">
           <h3>Money Movement</h3>
@@ -256,7 +245,6 @@
           <div class="work-image-placeholder">
             <span class="work-icon">💼</span>
           </div>
-          <!-- Replace with: <img src="images/wealth-advice.jpg" alt="Wealth & Advice platform design"> -->
         </div>
         <div class="work-card-content">
           <h3>Wealth & Advice</h3>
@@ -275,8 +263,7 @@
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section id="process" class="section fade-in">
+    <section id="process" class="section fade-in" aria-labelledby="process-heading">
     <div class="section-header">
       <div class="section-eyebrow">How I Work</div>
       <h2 class="section-title">Operating Model</h2>
@@ -286,7 +273,6 @@
     </div>
 
     <div class="process-grid">
-      <div class="process-card">
       <div class="process-card">
         <div class="process-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -336,8 +322,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section fade-in">
+    <section id="contact" class="section fade-in" aria-labelledby="contact-heading">
     <div class="section-header">
       <div class="section-eyebrow">Contact</div>
       <h2 class="section-title">Let's Work Together</h2>
@@ -381,7 +366,8 @@
     </div>
   </section>
 
-  <!-- Footer - Premium with Shapes -->
+  </main>
+
   <footer>
     <div class="footer-accent"></div>
     <div class="footer-shapes">
@@ -441,14 +427,9 @@
     </div>
   </footer>
 
-  <!-- Google Charts API -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  
-  <!-- External JavaScript - Modular & Maintainable -->
   <script src="js/utils.js"></script>
-  <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
-  <script src="js/hero-loader.js"></script>
   <script src="js/charts-loader.js"></script>
   <script src="js/main.js"></script>
 </body>

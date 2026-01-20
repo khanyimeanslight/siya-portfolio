@@ -39,7 +39,6 @@ class Animations {
       });
     }, options);
 
-    // Observe elements with fade-in class
     document.querySelectorAll('.fade-in').forEach(el => {
       observer.observe(el);
     });

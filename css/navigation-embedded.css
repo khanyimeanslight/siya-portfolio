@@ -1,7 +1,3 @@
-/* =========================
-   EMBEDDED NAVIGATION
-   Integrated into page flow, not fixed
-   ========================= */
 
 .nav-embedded {
   position: relative;
@@ -131,7 +127,6 @@
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }
 
-/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-embedded {
     padding: var(--space-md) var(--space-sm);

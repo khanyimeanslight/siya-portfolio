@@ -1,12 +1,6 @@
-/**
- * Google Charts Loader
- * Creates beautiful data visualizations for hero section
- */
-
 (function() {
   'use strict';
 
-  // Load Google Charts
   google.charts.load('current', { 'packages': ['corechart', 'bar'] });
 
   google.charts.setOnLoadCallback(drawCharts);
@@ -133,7 +127,6 @@
     });
   }
 
-  // Redraw charts on window resize
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);

@@ -1,13 +1,7 @@
-/* =========================
-   CASE STUDY THEMES
-   Contextual colors & graphics per project
-   ========================= */
-
-/* Onboarding & Identity - Security Blue */
 .case-theme-onboarding {
-  --theme-primary: #4F46E5;      /* Indigo - Trust & Security */
-  --theme-secondary: #6366F1;   /* Indigo Light - Clarity */
-  --theme-accent: #10B981;      /* Emerald - Success */
+  --theme-primary: #4F46E5;
+  --theme-secondary: #6366F1;
+  --theme-accent: #10B981;
   --theme-glow: rgba(79, 70, 229, 0.3);
   --theme-gradient: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #10B981 100%);
 }
@@ -30,11 +24,10 @@
   animation: floatIcon 20s ease-in-out infinite;
 }
 
-/* Servicing & Operations - Efficiency Green */
 .case-theme-servicing {
-  --theme-primary: #10B981;      /* Emerald - Efficiency */
-  --theme-secondary: #34D399;   /* Emerald Light - Growth */
-  --theme-accent: #F59E0B;      /* Amber - Energy */
+  --theme-primary: #10B981;
+  --theme-secondary: #34D399;
+  --theme-accent: #F59E0B;
   --theme-glow: rgba(16, 185, 129, 0.3);
   --theme-gradient: linear-gradient(135deg, #10B981 0%, #34D399 50%, #F59E0B 100%);
 }
@@ -57,11 +50,10 @@
   animation: floatIcon 20s ease-in-out infinite;
 }
 
-/* Lending & Risk - Caution Amber */
 .case-theme-lending {
-  --theme-primary: #F59E0B;      /* Amber - Caution & Risk */
-  --theme-secondary: #FBBF24;   /* Amber Light - Warning */
-  --theme-accent: #EF4444;      /* Red - Critical */
+  --theme-primary: #F59E0B;
+  --theme-secondary: #FBBF24;
+  --theme-accent: #EF4444;
   --theme-glow: rgba(245, 158, 11, 0.3);
   --theme-gradient: linear-gradient(135deg, #F59E0B 0%, #FBBF24 50%, #EF4444 100%);
 }
@@ -84,11 +76,10 @@
   animation: floatIcon 20s ease-in-out infinite;
 }
 
-/* Money Movement - Flow Purple */
 .case-theme-money {
-  --theme-primary: #8B5CF6;      /* Violet - Innovation */
-  --theme-secondary: #A78BFA;    /* Violet Light - Flow */
-  --theme-accent: #6366F1;      /* Indigo - Trust */
+  --theme-primary: #8B5CF6;
+  --theme-secondary: #A78BFA;
+  --theme-accent: #6366F1;
   --theme-glow: rgba(139, 92, 246, 0.3);
   --theme-gradient: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #6366F1 100%);
 }
@@ -111,11 +102,10 @@
   animation: floatIcon 20s ease-in-out infinite;
 }
 
-/* Wealth & Advice - Premium Gold */
 .case-theme-wealth {
-  --theme-primary: #F59E0B;      /* Amber - Premium */
-  --theme-secondary: #FCD34D;   /* Yellow - Wealth */
-  --theme-accent: #10B981;      /* Emerald - Growth */
+  --theme-primary: #F59E0B;
+  --theme-secondary: #FCD34D;
+  --theme-accent: #10B981;
   --theme-glow: rgba(245, 158, 11, 0.3);
   --theme-gradient: linear-gradient(135deg, #F59E0B 0%, #FCD34D 50%, #10B981 100%);
 }
@@ -138,7 +128,6 @@
   animation: floatIcon 20s ease-in-out infinite;
 }
 
-/* Case Studies Index - Multi-color */
 .case-theme-index {
   --theme-primary: #4F46E5;
   --theme-secondary: #10B981;
@@ -146,8 +135,6 @@
   --theme-glow: rgba(79, 70, 229, 0.2);
   --theme-gradient: linear-gradient(135deg, #4F46E5 0%, #10B981 50%, #F59E0B 100%);
 }
-
-/* Animations */
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -159,7 +146,6 @@
   66% { transform: translate(-20px, 40px) rotate(240deg); }
 }
 
-/* Apply theme colors to elements */
 .case-theme-onboarding .tag,
 .case-theme-onboarding .tldr-badge,
 .case-theme-onboarding .case-badge {
@@ -200,7 +186,6 @@
   border-color: var(--theme-primary);
 }
 
-/* Theme-specific accent lines */
 .case-theme-onboarding .section-header::after {
   background: var(--theme-gradient);
 }
@@ -221,7 +206,6 @@
   background: var(--theme-gradient);
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .case-header,
   .case-header::before {
