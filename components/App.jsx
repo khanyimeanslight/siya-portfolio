@@ -4,14 +4,14 @@
  */
 
 import React from 'react';
+import Hero from './Hero';
 import CaseStudyCard from './CaseStudyCard';
 import TLDRDiagram from './TLDRDiagram';
 
 const App = () => {
   return (
     <div className="app">
-      {/* React components can be used here */}
-      {/* Example: <CaseStudyCard {...props} /> */}
+      <Hero />
     </div>
   );
 };
