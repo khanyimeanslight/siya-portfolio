@@ -169,6 +169,13 @@
       box-shadow: 0 0 0 1px rgba(255, 77, 79, 0.08);
     }
 
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: center;
+    }
+
     /* Content links: keep readable and consistent with nav */
     main a {
       color: var(--color-text);
@@ -247,6 +254,26 @@
       outline-offset: 3px;
     }
 
+    .skip-link {
+      position: absolute;
+      left: var(--space-md);
+      top: var(--space-md);
+      background: var(--color-bg);
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      text-decoration: none;
+      transform: translateY(-150%);
+      transition: transform 160ms ease-out, border-color 160ms ease-out;
+      z-index: 10;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+      border-color: var(--color-accent);
+    }
+
     main {
       display: grid;
       gap: var(--space-lg);
@@ -276,6 +303,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="page">
 
     <!-- =========================
@@ -294,7 +322,10 @@
           </div>
           <div class="hero-aside">
             <p>Senior Product Design Manager; founder of <a href="https://www.elevexaworks.com/" rel="noopener">Elevexa Works</a> (consulting partner)</p>
-            <a class="cta" href="#contact" aria-label="Get in touch">Get in touch</a>
+            <div class="cta-row">
+              <a class="cta" href="#contact" aria-label="Get in touch">Get in touch</a>
+              <a class="cta" href="./case-studies/index.html" aria-label="Explore case studies">Explore case studies</a>
+            </div>
             <div class="hero-visual" aria-hidden="true">
               <div class="hero-bar hero-bar--accent"></div>
               <div class="hero-bar hero-bar--long"></div>
@@ -308,6 +339,7 @@
           <a href="#how-we-work">How We Work</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#selected-work">Selected Work</a>
+          <a href="./case-studies/index.html">Case Studies</a>
           <a href="#design-system">Design System</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -317,7 +349,7 @@
     <!-- =========================
          MAIN CONTENT
          ========================= -->
-    <main>
+    <main id="main">
 
       <section id="about" class="stack">
         <header class="section-header">
