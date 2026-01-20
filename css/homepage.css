@@ -74,10 +74,6 @@
   color: var(--color-text);
   margin-bottom: var(--space-md);
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-subtitle {
@@ -167,6 +163,7 @@
 .device-screen {
   width: 100%;
   height: 100%;
+  margin-top: 40px;
   background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 212, 170, 0.05) 100%);
   display: flex;
   align-items: center;
@@ -210,6 +207,11 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   opacity: 0.8;
+  margin: 0;
+}
+
+.hero-placeholder-text p {
+  margin: 0;
 }
 
 .device-screen::after {
@@ -761,14 +763,20 @@
   }
 }
 
-/* Scroll Animations */
+/* Scroll Animations - Progressive Enhancement */
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in.visible {
+/* Only hide if JavaScript is enabled */
+.js-loaded .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.js-loaded .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }

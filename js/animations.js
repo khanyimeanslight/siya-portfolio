@@ -12,11 +12,12 @@ class Animations {
   }
 
   init() {
-    if (this.reducedMotion) return;
-
+    // Always set up observers, but respect reduced motion
     // Intersection Observer for fade-in animations
     this.setupIntersectionObserver();
     
+    if (this.reducedMotion) return;
+
     // 3D card effects
     this.setup3DCards();
     
