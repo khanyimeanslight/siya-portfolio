@@ -49,6 +49,7 @@
       justify-content: center;
     }
 
+    /* Layout system: single column, consistent rhythm */
     .page {
       width: 100%;
       max-width: var(--max-width);
@@ -57,9 +58,34 @@
       gap: var(--space-lg);
     }
 
+    header,
     section {
       padding-top: var(--space-md);
       border-top: 1px solid var(--color-border);
+    }
+
+    .brand-bar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      font-size: var(--text-sm);
+    }
+
+    nav a {
+      color: var(--color-text);
+      text-decoration: none;
+      padding: 4px 0;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--color-accent);
     }
 
     h1 {
@@ -110,6 +136,12 @@
       padding-top: var(--space-sm);
       border-top: 1px solid var(--color-border);
     }
+
+    @media (max-width: 680px) {
+      body {
+        padding: var(--space-md);
+      }
+    }
   </style>
 </head>
 
@@ -120,9 +152,20 @@
          HERO / IDENTITY
          ========================= -->
     <header>
-      <div class="meta">
-        <h1>Siya</h1>
-        <p>Senior Product Design Manager</p>
+      <div class="brand-bar">
+        <div class="meta">
+          <h1>Elevexa Works</h1>
+          <p>Product &amp; Platform Design for Regulated Financial Services</p>
+        </div>
+        <p>Lead consultant: Siya — Senior Product Design Manager</p>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#how-we-work">How We Work</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#selected-work">Selected Work</a>
+          <a href="#design-system">Design System</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -131,20 +174,20 @@
          ========================= -->
     <main>
 
-      <section id="intro" class="stack">
-        <h2>Intro &amp; Role</h2>
+      <section id="about" class="stack">
+        <h2>About</h2>
         <p>
-          I design end-to-end product systems for regulated financial services —
-          balancing human-centred design, data integrity, and platform scale.
+          Elevexa Works is a consulting practice focused on product and platform design for regulated financial services.
+          We align executive intent, regulatory requirements, and product delivery.
         </p>
         <p>
-          My remit: frame problems crisply, align stakeholders early, and land decisions
-          that respect regulation while still moving product velocity forward.
+          Led by Siya (Senior Product Design Manager), we operate as an embedded partner—framing problems crisply,
+          convening stakeholders, and guiding decisions that balance compliance, velocity, and customer clarity.
         </p>
       </section>
 
-      <section id="how-i-work" class="stack">
-        <h2>How I Work</h2>
+      <section id="how-we-work" class="stack">
+        <h2>Operating Model: How We Work</h2>
         <ul>
           <li>Systems thinking first: map flows, controls, and data lineage before UI choices.</li>
           <li>Regulatory constraints as design inputs: embed KYC, AML, and auditability upfront.</li>
@@ -153,9 +196,9 @@
         </ul>
       </section>
 
-      <section id="case-studies" class="stack">
-        <h2>Selected Work</h2>
-        <p>Problem spaces I lead, before case study depth:</p>
+      <section id="capabilities" class="stack">
+        <h2>Capabilities</h2>
+        <p>Engagement domains where we partner with product, risk, and engineering:</p>
         <ul>
           <li>Onboarding and identity: reducing friction while strengthening verification rigor.</li>
           <li>Servicing and operations: elevating agent tooling to cut handle time and errors.</li>
@@ -165,8 +208,20 @@
         </ul>
       </section>
 
+      <section id="selected-work" class="stack">
+        <h2>Selected Work</h2>
+        <p>Experience across domains; case details available in engagement:</p>
+        <ul>
+          <li>Enterprise onboarding redesigns aligning KYC/AML controls with customer clarity.</li>
+          <li>Operations platforms improving agent accuracy and reducing exception handling.</li>
+          <li>Credit and lending journeys integrating eligibility models and transparent outcomes.</li>
+          <li>Payments resilience work with clear recovery paths and customer-safe messaging.</li>
+          <li>Wealth guidance flows that respect fiduciary boundaries while aiding decisions.</li>
+        </ul>
+      </section>
+
       <section id="design-system" class="stack">
-        <h2>Design System</h2>
+        <h2>Platform Design System</h2>
         <p>Built for scale, governance, and platform longevity:</p>
         <ul>
           <li>Token-driven foundations with accessibility baked into primitives and patterns.</li>
@@ -185,6 +240,15 @@
           <li>Define missions, decision forums, and escalation paths that reduce ambiguity.</li>
           <li>Mentor designers on systems thinking, critique, and cross-functional negotiation.</li>
           <li>Partner with legal, risk, and engineering to keep delivery aligned with controls.</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="stack">
+        <h2>Contact</h2>
+        <p>Professional inquiries:</p>
+        <ul>
+          <li>Email: <a href="mailto:contact@elevexa.works">contact@elevexa.works</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/siya" rel="noopener">linkedin.com/in/siya</a></li>
         </ul>
       </section>
 
