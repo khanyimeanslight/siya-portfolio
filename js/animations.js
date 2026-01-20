@@ -12,8 +12,7 @@ class Animations {
   }
 
   init() {
-    // Always set up observers, but respect reduced motion
-    // Intersection Observer for fade-in animations
+    // Always set up observers for fade-in (respects reduced motion in CSS)
     this.setupIntersectionObserver();
     
     if (this.reducedMotion) return;
@@ -34,14 +33,14 @@ class Animations {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
     }, options);
 
-    // Observe elements with animation class
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    // Observe elements with fade-in class
+    document.querySelectorAll('.fade-in').forEach(el => {
       observer.observe(el);
     });
   }
