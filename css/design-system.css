@@ -4,31 +4,72 @@
    ========================= */
 
 :root {
-  /* Fintech Color Palette - Professional & Trustworthy */
-  --color-primary: #0066FF;
-  --color-primary-dark: #0052CC;
-  --color-primary-light: #3385FF;
-  --color-secondary: #00D4AA;
-  --color-secondary-dark: #00B894;
-  --color-accent: #FF6B6B;
-  --color-accent-dark: #EE5A5A;
+  /* =========================
+     COLOR PSYCHOLOGY SYSTEM
+     Based on Behavioral Science & Trust
+     ========================= */
   
-  /* Neutral Palette - High Contrast for WCAG */
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F8F9FA;
+  /* Primary: Deep Indigo - Trust, Security, Professionalism, Sophistication */
+  /* Psychology: Indigo promotes trust, stability, and intellectual depth */
+  --color-primary: #4F46E5;        /* Indigo 600 - Trust & Authority */
+  --color-primary-dark: #4338CA;   /* Indigo 700 - Depth & Stability */
+  --color-primary-light: #6366F1;  /* Indigo 500 - Approachable Trust */
+  --color-primary-glow: rgba(79, 70, 229, 0.3);
+  
+  /* Secondary: Emerald Green - Growth, Prosperity, Success, Stability */
+  /* Psychology: Green represents growth, financial success, and harmony */
+  --color-secondary: #10B981;      /* Emerald 500 - Growth & Success */
+  --color-secondary-dark: #059669;  /* Emerald 600 - Stability */
+  --color-secondary-light: #34D399; /* Emerald 400 - Fresh Energy */
+  --color-secondary-glow: rgba(16, 185, 129, 0.25);
+  
+  /* Accent: Amber Gold - Premium, Value, Achievement, Warmth */
+  /* Psychology: Gold conveys premium quality, achievement, and warmth */
+  --color-accent: #F59E0B;         /* Amber 500 - Premium & Value */
+  --color-accent-dark: #D97706;   /* Amber 600 - Rich Achievement */
+  --color-accent-light: #FBBF24;  /* Amber 400 - Warm Energy */
+  --color-accent-glow: rgba(245, 158, 11, 0.25);
+  
+  /* Tertiary: Violet Purple - Innovation, Creativity, Premium */
+  /* Psychology: Purple suggests innovation, creativity, and premium positioning */
+  --color-tertiary: #8B5CF6;      /* Violet 500 - Innovation */
+  --color-tertiary-dark: #7C3AED;  /* Violet 600 - Premium */
+  --color-tertiary-light: #A78BFA; /* Violet 400 - Creative Energy */
+  
+  /* Background: Deep Navy to Charcoal - Sophistication, Premium, Focus */
+  /* Psychology: Dark backgrounds reduce eye strain, convey premium, increase focus */
+  --color-bg: #0F172A;             /* Slate 900 - Deep Sophistication */
+  --color-bg-alt: #1E293B;         /* Slate 800 - Elevated Surface */
+  --color-bg-surface: #1E293B;     /* Slate 800 - Card Background */
+  --color-bg-elevated: #334155;    /* Slate 700 - Elevated Cards */
+  
+  /* Light Mode Override (for content sections) */
   --color-surface: #FFFFFF;
-  --color-surface-elevated: #F5F7FA;
-  --color-text: #1A1F36;
-  --color-text-secondary: #4A5568;
-  --color-text-muted: #718096;
-  --color-border: #E2E8F0;
-  --color-border-soft: #F1F5F9;
+  --color-surface-elevated: #F8FAFC;
   
-  /* Status Colors */
+  /* Text: High Contrast for Readability */
+  --color-text: #F1F5F9;          /* Slate 100 - Primary Text on Dark */
+  --color-text-light: #FFFFFF;     /* Pure White for Headings */
+  --color-text-secondary: #CBD5E1; /* Slate 300 - Secondary Text */
+  --color-text-muted: #94A3B8;    /* Slate 400 - Muted Text */
+  --color-text-on-light: #1E293B; /* Slate 800 - Text on Light BG */
+  
+  /* Borders: Subtle Separation */
+  --color-border: rgba(148, 163, 184, 0.2);      /* Subtle Border */
+  --color-border-soft: rgba(148, 163, 184, 0.1); /* Very Subtle */
+  --color-border-glow: rgba(79, 70, 229, 0.3);   /* Glowing Border */
+  
+  /* Status Colors - Maintained for Consistency */
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
-  --color-info: #3B82F6;
+  --color-info: #6366F1;
+  
+  /* Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-tertiary) 100%);
+  --gradient-success: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+  --gradient-premium: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+  --gradient-dark: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
   
   /* Spacing Scale */
   --space-xs: 0.5rem;    /* 8px */
@@ -113,7 +154,7 @@ body {
   font-size: var(--text-base);
   line-height: var(--line-relaxed);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
